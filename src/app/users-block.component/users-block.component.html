@@ -1,0 +1,25 @@
+<div class="container align-text-center">
+  <!-- Titel and description of block -->
+  <h1>{{ title }}</h1>
+  <h4>{{ subtitle }}</h4>
+  <!-- User list container -->
+  <ng-container *ngIf="showUserList(); else userListEmpty">
+    <div
+      class="user-cards-list
+      d-flex f-warp 
+      mob-f-d-col"
+    >
+      <!-- user cards -->
+      <ng-container *ngFor="let user of userList">
+        <user-card [user]="user"></user-card>
+      </ng-container>
+    </div>
+  </ng-container>
+  <ng-template #userListEmpty>
+    <div class="user-cards-list-empty">
+      <p>{{ empty }}</p>
+    </div>
+  </ng-template>
+  <!-- /.user-cards-list -->
+  <button (click)="onClickMore()">{{ moreButton }}</button>
+</div>

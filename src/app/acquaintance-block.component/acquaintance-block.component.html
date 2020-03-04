@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 class="align-text-center">{{ title }}</h1>
+  <div class="d-flex align-items-start mobile-f-direction-col">
+    <div class="article-image">
+      <img src="assets/acquaintance-img.svg" alt="Man with laptop" />
+    </div>
+    <!-- /.article-image -->
+    <div class="article-info">
+      <h2>{{ subtitle }}</h2>
+      <p *ngFor="let paragraph of paragraphs">
+        {{ paragraph }}
+      </p>
+      <a href="#" class="btn-flat">{{ actionTitle }}</a>
+    </div>
+    <!-- /.article-info -->
+  </div>
+  <!-- /.d-flex .align-items-center -->
+</div>
+<!-- /.container -->

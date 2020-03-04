@@ -1,0 +1,45 @@
+/* Simple classes styles */
+
+/* for flex-boxes */
+.d-flex {
+  display: flex;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.f-warp {
+  flex-wrap: wrap;
+}
+
+/* for any text blocks */
+.align-text-center {
+  text-align: center;
+}
+
+/* display and padding for components in root-app */
+.d-block {
+  display: block;
+}
+
+.p-block {
+  padding: 150px 0;
+}
+
+/* border between elements (in menu, and before footer)*/
+.b-border {
+  border-bottom: 1px solid #000;
+}

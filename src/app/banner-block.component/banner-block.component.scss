@@ -1,0 +1,26 @@
+/* Import global constants, and mixins */
+@import "src/styles/constants.styles.scss";
+
+/* Style from mockups */
+:host {
+  background-color: $color;
+  background: url("/assets/banner-bg.jpg") center center no-repeat;
+  background-size: cover;
+  padding: 107px 0 114px;
+}
+
+* {
+  color: $bg-color-1;
+}
+
+h1 {
+  text-transform: uppercase;
+  max-width: 530px;
+  margin-bottom: 25px;
+  letter-spacing: -0.7px;
+}
+
+p {
+  max-width: 530px;
+  margin-bottom: 34px;
+}

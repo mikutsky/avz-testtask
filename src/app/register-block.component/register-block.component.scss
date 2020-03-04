@@ -1,0 +1,219 @@
+/* Import global constants, and mixins */
+@import "src/styles/constants.styles.scss";
+
+/* Style from mockups */
+h1 {
+  margin-bottom: 17px;
+}
+
+h4 {
+  max-width: 450px;
+  line-height: 24px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 497px;
+  padding: 0 15px;
+  margin: auto;
+
+  * {
+    font: $font-second;
+  }
+}
+
+/* -- text input box */
+.input-box {
+  padding: 30px 0 24px;
+
+  label {
+    display: block;
+    width: 100%;
+    background-color: $input-outline-color;
+    border: $input-outline;
+    margin: -4px;
+    position: relative;
+    border-radius: 7px;
+    box-sizing: content-box;
+
+    .inp-caption {
+      display: block;
+      position: absolute;
+      top: -28px;
+    }
+
+    input {
+      outline: none;
+      width: 100%;
+      background-color: $bg-color-1;
+      border: 1px solid $input-border-color;
+      border-radius: 4px;
+      min-height: 38px;
+      padding: 0 13px;
+      &[type="tel"] {
+        letter-spacing: 0.25px;
+      }
+      &::placeholder {
+        color: $input-color-placeholder;
+      }
+    }
+  }
+}
+
+/* -- radio input box */
+.radio-box {
+  padding: 23px 0 10px;
+
+  .radio-caption {
+    margin-bottom: 23px;
+  }
+
+  label {
+    display: block;
+    width: fit-content;
+    margin-bottom: 12px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  input[type="radio"] {
+    display: none;
+    & + label::before {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      vertical-align: top;
+      border: 1px solid $input-radio-color;
+      border-radius: 50%;
+      margin-right: 9px;
+      margin-bottom: 2px;
+      content: "";
+    }
+  }
+
+  input[type="radio"]:checked {
+    & + label::before {
+      border-color: $second-color;
+      background-color: $second-color;
+    }
+    & + label::after {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-color: $bg-color-1;
+      margin: 5px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      border-radius: 50%;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+      content: "";
+    }
+  }
+}
+
+/* -- file input box */
+.photo-box {
+  padding-bottom: 41px;
+
+  .photo-caption {
+    margin-bottom: 13px;
+  }
+
+  .el-box-outline {
+    outline: none;
+    width: 100%;
+    background-color: $input-outline-color;
+    border: $input-outline;
+    margin: -4px;
+    position: relative;
+    border-radius: 7px;
+    box-sizing: content-box;
+  }
+
+  label {
+    display: flex;
+    width: 100%;
+    min-height: 38px;
+    background-color: $bg-color-1;
+    border: 1px solid $input-border-color;
+    border-radius: 4px;
+    cursor: pointer;
+
+    > * {
+      line-height: 36px !important;
+      color: $input-color-placeholder;
+      padding: 0 13px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &::after {
+      margin-left: auto;
+      margin-right: 0;
+      line-height: 36px !important;
+      color: $color;
+      background-color: $input-browse-bg;
+      padding: 0 15px;
+      border-left: inherit;
+      border-radius: 0 4px 4px 0;
+      content: "Browse";
+    }
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+}
+
+/* -- form element Active, Invalid(Error) outline and border style and hint text */
+.el-box-active-invalid {
+  /* -- hint + message */
+  .el-box-outline[hint],
+  .el-box-outline[message] {
+    &::after {
+      display: block;
+      position: absolute;
+      font-size: 13.25px !important;
+      margin: 8px 1px 0;
+    }
+  }
+
+  /* -- active(focus) */
+  &[active] .el-box-outline {
+    background-color: $input-outline-color-active;
+
+    > .el-box-border {
+      border-color: $input-border-color-active;
+    }
+  }
+
+  /* -- invalid(Error) */
+  &[invalid] .el-box-outline {
+    background-color: $input-outline-color-invalid;
+
+    > .el-box-border {
+      border-color: $input-border-color-invalid;
+    }
+    /* -- error text */
+    &[message]::after {
+      color: $input-color-invalid;
+      content: attr(message);
+    }
+  }
+
+  /* -- hint text */
+  &:not([invalid]) .el-box-outline {
+    &[hint]::after {
+      color: $input-color-invalid;
+      content: attr(hint);
+    }
+  }
+}
+
+/* -- submit box */
+.submit-box {
+  padding-bottom: 14px;
+}

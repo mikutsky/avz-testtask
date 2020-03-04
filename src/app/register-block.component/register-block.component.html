@@ -1,0 +1,126 @@
+<div class="container">
+  <h1 class="align-text-center">Register to get a work</h1>
+  <h4 class="align-text-center">
+    Attention! After successful registration and alert, update the list of users
+    in the block from the top
+  </h4>
+  <form [formGroup]="registerForm">
+    <div class="input-box el-box-active-invalid" active invalid>
+      <label for="inp-name" class="el-box-outline">
+        <span class="inp-caption">Name</span>
+        <input
+          formControlName="name"
+          type="text"
+          name="name"
+          id="inp-name"
+          class="el-box-border"
+          placeholder="Your name"
+          required
+        />
+      </label>
+    </div>
+    <!-- /.input-box -->
+
+    <div class="input-box el-box-active-invalid" active>
+      <label for="inp-email" class="el-box-outline">
+        <span class="inp-caption">Email</span>
+        <input
+          formControlName="email"
+          type="email"
+          name="email"
+          id="inp-email"
+          class="el-box-border"
+          placeholder="Your email"
+          required
+        />
+      </label>
+    </div>
+    <!-- /.input-box -->
+
+    <div class="input-box el-box-active-invalid" invalid>
+      <label
+        for="inp-phone"
+        class="el-box-outline"
+        hint="Еnter phone number in open format"
+        message="Error"
+      >
+        <span class="inp-caption">
+          Phone number
+        </span>
+        <input
+          formControlName="phone"
+          type="tel"
+          name="phone"
+          id="inp-phone"
+          class="el-box-border"
+          placeholder="+380 XX XXX XX XX"
+          pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$"
+          required
+        />
+      </label>
+    </div>
+    <!-- /.input-box -->
+
+    <div class="radio-box">
+      <h5 class="radio-caption">
+        Select your position
+      </h5>
+      <input
+        formControlName="position"
+        type="radio"
+        name="position"
+        id="inp-frontend"
+        value="F"
+        checked
+      />
+      <label for="inp-frontend">Frontend developer</label>
+      <input
+        formControlName="position"
+        type="radio"
+        name="position"
+        id="inp-backend"
+        value="B"
+      />
+      <label for="inp-backend">Backend developer</label>
+      <input
+        formControlName="position"
+        type="radio"
+        name="position"
+        id="inp-designer"
+        value="D"
+      />
+      <label for="inp-designer">Designer</label>
+      <input
+        formControlName="position"
+        type="radio"
+        name="position"
+        id="inp-qa"
+        value="Q"
+      />
+      <label for="inp-qa">QA</label>
+    </div>
+    <!-- /.radio-box -->
+
+    <div class="photo-box el-box-active-invalid" active invalid>
+      <h5 class="photo-caption">Photo</h5>
+
+      <div class="el-box-outline" message="Error">
+        <input
+          formControlName="photo"
+          type="file"
+          name="photo"
+          id="inp-photo"
+          accept=".png, .jpg, .jpeg"
+        />
+        <label class="inp-photo-file el-box-border" for="inp-photo">
+          <span>Upload your photo</span>
+        </label>
+      </div>
+    </div>
+    <!-- /.input-box -->
+    <div class="submit-box align-text-center">
+      <button type="submit">Sign up now</button>
+    </div>
+  </form>
+</div>
+<!-- /.container -->

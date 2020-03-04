@@ -1,0 +1,32 @@
+<!-- user photo -->
+<div class="user-card-animation" [@showAnimation]="stateAnimation">
+  <div class="user-card">
+    <div class="user-card-photo" photo-container>
+      <img
+        [src]="photo.src"
+        [alt]="photo.alt"
+        *ngIf="photo.show"
+        (error)="onImageError()"
+        (load)="showAnimation()"
+      />
+      <!-- initial letter, if photo unshow -->
+      <ng-container *ngIf="!photo.show">
+        {{ initialLetter }}
+      </ng-container>
+    </div>
+    <!-- user name and position -->
+    <h2 class="user-card-name">{{ name }}</h2>
+    <p class="user-card-position">{{ position }}</p>
+    <!-- if contacts not empty, show -->
+    <ng-container *ngIf="contact.show; else contactsEmpty">
+      <!-- if the specified email, show it -->
+      <p class="user-card-email" *ngIf="name">{{ contact.email }}</p>
+      <!-- if the specified phone, show it -->
+      <p class="user-card-phone" *ngIf="name">{{ contact.phone }}</p>
+    </ng-container>
+    <!-- if contacts empty, show message -->
+    <ng-template #contactsEmpty>
+      <p class="user-card-empty">{{ contact.empty }}</p>
+    </ng-template>
+  </div>
+</div>

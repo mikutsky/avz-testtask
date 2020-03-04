@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles, and import other style files */
+
+/* Import Google-fonts */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
+
+/* Import global constants, and mixins */
+@import "./styles/constants.styles.scss";
+
+/* Reset default style */
+@import "./styles/reset-default.styles.scss";
+@import "./styles/simple-classes.styles.scss";
+
+/* Common Style */
+@import "./styles/common.style.scss";

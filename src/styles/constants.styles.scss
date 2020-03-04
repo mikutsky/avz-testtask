@@ -1,0 +1,42 @@
+/* Constants from specification */
+$min-width: 360px;
+$max-width: 2560px;
+$max-container-width: 1170px;
+
+/* from Style guide */
+$font: 400 16px/1 "Open Sans", sans-serif;
+$font-second: 400 16px/1 "PT Sans", sans-serif;
+
+/* main colors */
+$color: #212529;
+$main-color: #ef5b4c;
+$second-color: #007bff;
+
+$bg-color-1: #fff;
+$bg-color-2: #f9f9f3;
+
+$hover-color: #d24335;
+$disable-color: #8c8c8c;
+$disable-bg-color: #d7d7d7;
+
+/* for forms elements */
+$input-color: #404040;
+$input-color-placeholder: #b2b9c0;
+$input-border-color: #ced4da;
+$input-outline-color: transparent;
+$input-outline: 3px solid $input-outline-color;
+/* -- disabled inputs */
+$input-color-disable: #767e86;
+$input-bg-disable: #e9ecef;
+/* -- active inputs */
+$input-border-color-active: #80bdff;
+$input-outline-color-active: rgba($input-border-color-active, 0.2);
+/* -- invalid inputs */
+$input-border-color-invalid: #db3445;
+$input-outline-color-invalid: rgba($input-border-color-invalid, 0.2);
+/* -- error subscribe */
+$input-color-invalid: #f44336;
+/* -- radio inputs */
+$input-radio-color: #adb5bd;
+/* -- file inputs */
+$input-browse-bg: #f8f7f5;

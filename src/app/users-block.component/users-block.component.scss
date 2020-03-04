@@ -1,0 +1,31 @@
+/* Import global constants, and mixins */
+@import "src/styles/constants.styles.scss";
+
+/* Style from mockups */
+:host {
+  background-color: $bg-color-2;
+}
+
+h1 {
+  margin: 1px 0 21px;
+}
+
+h4 {
+  margin-bottom: 52px;
+}
+
+a,
+button {
+  margin: 7px 0 10px;
+}
+
+.user-cards-list {
+  margin: 0 -15px;
+  > .user-cards-item:last-child {
+    margin-right: auto;
+  }
+}
+
+.user-cards-list-empty {
+  margin-bottom: 52px;
+}

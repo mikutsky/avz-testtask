@@ -1,0 +1,25 @@
+/* Style for all containers */
+.container {
+  max-width: $max-container-width;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+/* Buttons style, for tag <a> */
+.btn {
+  @extend button;
+}
+
+.btn-flat {
+  display: inline-block;
+  color: $main-color;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 7px 0;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    color: $hover-color;
+  }
+}
